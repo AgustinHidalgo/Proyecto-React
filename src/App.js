@@ -1,5 +1,5 @@
 import './App.css';
-import ItemListConteiner from './componentes/itemListConteiner';
+import Productos from './conteiners/prod-conteiner';
 import NavBar from './componentes/navbar';
 
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>  
       <NavBar />
-      <ItemListConteiner frase="Hola itemLisConteiner"/>
+      <Productos />
     
     
     </>
