@@ -23,6 +23,8 @@ body{
 }
 .card{
   background-color: white;
+  height: 100px;
+  width: 100px;
 }
 /* @keyframes App-logo-spin {
   from {
