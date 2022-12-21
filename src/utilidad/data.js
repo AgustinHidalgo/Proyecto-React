@@ -6,7 +6,8 @@ export const data = [
         precio: "$15.700",
         estado: "En Stock",
         cantidad: "13 ",
-        id: 1
+        id: 1,
+        categoriaId: "10"
     },
     {
         titulo: "Procesador Amd Ryzen 5 4500 Sin Video AM4",
@@ -15,7 +16,8 @@ export const data = [
         precio: "$38.700",
         estado: "En Stock",
         cantidad: "10 ",
-        id: 2
+        id: 2,
+        categoriaId: "10"
     },
     {
         titulo: "Memoria Ram DDR4 4GB Adata 2666MHz AD4U26664G19-SGN",
@@ -24,7 +26,8 @@ export const data = [
         precio: "$9.100",
         estado: "En Stock",
         cantidad: "23 ",
-        id: 3
+        id: 3,
+        categoriaId: "8"
     },
     {
         titulo: "Memoria Ram DDR4 8GB KingDian 3200MHz",
@@ -33,7 +36,8 @@ export const data = [
         precio: "$12.500",
         estado: "En Stock",
         cantidad: "7 ",
-        id: 4
+        id: 4,
+        categoriaId: "8"
     },
     {
         titulo: "Perifericos Mouse USB Redragon Memealion Chroma Gamer M710",
@@ -42,7 +46,8 @@ export const data = [
         precio: "$5.200",
         estado: "En Stock",
         cantidad: "30 ",
-        id: 5
+        id: 5,
+        categoriaId: "20"
     },
     {
         titulo: "Mouse USB Logitech G203 Lightsync Blue Gamer 910-005795",
@@ -51,6 +56,7 @@ export const data = [
         precio: "$7.700",
         estado: "En Stock",
         cantidad: "9 ",
-        id: 6
+        id: 6,
+        categoriaId: "20"
     }
 ]
