@@ -11,8 +11,8 @@ function App() {
     <NavBar /> 
     <Routes>
       <Route  path ="/" element={<Productos />}/> 
-      <Route  path ="/categoria/:categoriaId" element={<Productos />}/> 
-      <Route  path ="/producto/:productoId" element={<ProductoDetalle />}/>
+      <Route  path ="/categoria/:categoriaID" element={<Productos />}/> 
+      <Route  path ="/producto/:productoID" element={<ProductoDetalle />}/>
     </Routes>
       
     </BrowserRouter>
