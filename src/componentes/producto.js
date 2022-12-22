@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Producto = ({id, img, titulo, precio, descript, cantidad, estado}) =>{
@@ -10,7 +11,7 @@ const Producto = ({id, img, titulo, precio, descript, cantidad, estado}) =>{
                 <h4 className="precio-card">{precio}</h4>
                 <div className="conteiner-compra">
                     <button className="boton-card">Comprar</button>
-                    <button className="boton-card">Ver Mas</button>
+                    <button className="boton-card"><Link to={`/producto/${id}`}>Ver Mas</Link></button>
                     <span>{cantidad}</span>
                     <span>{estado}</span>
                 </div>

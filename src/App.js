@@ -2,7 +2,7 @@ import './App.css';
 import Productos from './conteiners/prod-conteiner';
 import NavBar from './componentes/navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ProductoDetalle from './componentes/producto-detalle';
+import ItemDetailContainer from './conteiners/itemListConteiner';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route  path ="/" element={<Productos />}/> 
       <Route  path ="/categoria/:categoriaID" element={<Productos />}/> 
-      <Route  path ="/producto/:productoID" element={<ProductoDetalle />}/>
+      <Route  path ="/producto/:productoID" element={<ItemDetailContainer />}/>
     </Routes>
       
     </BrowserRouter>

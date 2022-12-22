@@ -14,7 +14,7 @@ const Productos = () =>{
     useEffect(() => {
         customFetch(100, data)
             .then(result => {
-                const productos = categoriaID ? result.filter(p => p.categoriaID == categoriaID) : result 
+                const productos = categoriaID ? result.filter(p => p.categoriaId === categoriaID) : result 
                 setDatos(productos)})
             
             .catch((err => console.log(err)))
@@ -29,6 +29,7 @@ const Productos = () =>{
                 return(
                 <Producto
                     key={item.id}
+                    id={item.id}
                     categoriaID ={item.categoriaId}
                     img= {item.img}
                     titulo= {item.titulo}
