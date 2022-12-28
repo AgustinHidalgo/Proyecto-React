@@ -76,6 +76,13 @@ a{
   list-style: none;
   color: #ffa107;
 }
+.itemCountDiv{
+  margin: 0 60px;
+  display: flex;
+}
+.itemCountDiv p {
+  color: white
+}
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
