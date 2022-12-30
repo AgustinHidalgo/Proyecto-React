@@ -55,7 +55,7 @@ export const data = [
         descript: "ESPECIFICACIONES TÉCNICAS Iluminación RGB LIGHTSYNC 6 botones programables Resolución: 200 a 8.000 dpi RESPUESTA Formato de datos USB: 16 bits/eje Velocidad de respuesta USB: 1.000 Hz (1 ms) Microprocesador: ARM de 32 bits",
         precio: "$7.700",
         estado: "En Stock",
-        cantidad: "9 ",
+        cantidad: 9 ,
         id: 6,
         categoriaId: "20"
     }

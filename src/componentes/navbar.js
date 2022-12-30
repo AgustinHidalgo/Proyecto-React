@@ -11,7 +11,7 @@ const NavBar = () =>{
             <span><Link to='/categoria/20'>Mouses </Link></span>
             <span><Link to='/categoria/8'>Memorias Ram </Link></span>
             <span>Logeate</span>
-            <span className='icon'> < HiOutlineShoppingCart /> </span>
+            <Link to={"/carrito"}><span className='icon'> < HiOutlineShoppingCart /></span></Link>
         </div>
     )
 }

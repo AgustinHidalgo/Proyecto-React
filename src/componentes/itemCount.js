@@ -1,55 +1,38 @@
 import { useEffect, useState } from 'react';
-const ItemCount = ({initial = 0,}) => {
+
+const ItemCount = ({ stock, initial = 1,  onAdd }) => {
     const [count, setCount] = useState(0);
-    
+
     useEffect(() => {
         setCount(initial);
     },[]);
 
-    const increment = () => {
-        setCount (count + 1)
+    let increment = () => {
+        if (count < stock) {
+            setCount(count + 1);
+        }
         
     }
     
     const decrement = () => {
-        if(count > initial){
+        if (count > initial) {
             setCount(count - 1);
-
         }
     }
     
-    
-    const AddToCart = () =>{
-        if(count > initial){
-        alert("se añadio al carrito")
-        setCount(0)
-        }
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    return(
-        <div className="itemCountDiv">
-            <button onClick={increment}> + </button>
+    return (
+        <div className='itemCountDiv'>
+            <button onClick={increment}>+</button>
             <p>{count}</p>
-            <button onClick={decrement}> - </button>
-            <button onClick={AddToCart}> Añadir al Carrito </button> 
+            <button onClick={decrement}>-</button>
             
-            {/* {
-                count > initial
-                : console.log("eso todavia no es posible")
-
-            } */}
+            {
+                stock
+                ? <p><button onClick={() => onAdd(count)}>Agregar al carrito</button></p>
+                : <p><button disabled>Agregar al carrito</button></p>
+            }
         </div>
-    )
+    );
 }
 
 export default ItemCount;
