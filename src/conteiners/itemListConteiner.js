@@ -1,23 +1,65 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import customFetch from "../utilidad/customFetch";
-import ProductoDetalle from "../componentes/producto-detalle";
-const { data } = require('../utilidad/data');
+import Producto from "../componentes/item"
+import {db} from "../utilidad/firebase"
+import { useParams } from 'react-router';
+import { useEffect, useState } from 'react';
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 
-const ItemDetailContainer = () => {
-    const [dato, setDato] = useState({});
-    const { productoID } = useParams();
-    
+
+const Productos = () =>{
+    const [datos, setDatos] = useState([]);
+    const { categoriaID } = useParams();
+
+    console.log(categoriaID);
+
     useEffect(() => {
-        customFetch(100, data.find(item => item.id == productoID))
-            .then(result => setDato(result))
+        const fetchFirestone = async () => {
+                let q
+                if(categoriaID){
+                    q = query(collection(db, "productos"), where("categoriaId", "==", categoriaID))
+
+            }
+                else{
+                    q = query(collection(db, "productos"), orderBy("precio", "asc"))
+                    console.log("funciona")
+
+                }
+            
+            
+            
+                const querySnapshot = await getDocs(q);
+                const dataFirestone = querySnapshot.docs.map(item =>({
+                    id: item.id,
+                    ...item.data()
+                }))
+                    return dataFirestone
+        }
+        fetchFirestone()
+            .then(result => setDatos(result))
             .catch(err => console.log(err))
-    }, [productoID]);
+    }, [categoriaID]);
+
+
     
     return (
+        <div className="contenedor-card">
+            {
+                datos.map(item => {
+                return(
+                <Producto
+                    key={item.id}
+                    id={item.id}
+                    categoriaID ={item.categoriaId}
+                    img= {item.img}
+                    titulo= {item.titulo}
+                    precio=  {item.precio}
+                    cantidad= {item.cantidad}
+                    estado={item.estado} />
+                    )
+                })
+            }
         
-        <ProductoDetalle item={dato}/>
+        </div>
     );
 }
 
-export default ItemDetailContainer;
+export default Productos
