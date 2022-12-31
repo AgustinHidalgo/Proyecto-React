@@ -7,7 +7,10 @@ export const cartContext = createContext()
 const CartContextProvider = ({children}) =>{
     const [cartList, setCartList] = useState([])
     
+
     const addToCart = (item,cant) =>{
+        const repeat = cartList.find(p => p.id === item.id)
+        if(repeat === undefined){
         setCartList([
             ...cartList,
             {
@@ -20,7 +23,11 @@ const CartContextProvider = ({children}) =>{
             }
         ])
     }
-    
+        else{
+            repeat.cant += cant
+            setCartList([...cartList])
+        }
+    }
     
     
     
@@ -34,7 +41,6 @@ const CartContextProvider = ({children}) =>{
     const limpiarCarrito = () => {
         setCartList([]);
     }
-    
     
     
     return(

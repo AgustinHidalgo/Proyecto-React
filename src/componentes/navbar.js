@@ -1,6 +1,5 @@
-import { HiOutlineShoppingCart} from 'react-icons/hi'
 import {Link} from 'react-router-dom'
-
+import CartWidget from './cartWidget';
 
 
 const NavBar = () =>{
@@ -11,7 +10,7 @@ const NavBar = () =>{
             <span><Link to='/categoria/20'>Mouses </Link></span>
             <span><Link to='/categoria/8'>Memorias Ram </Link></span>
             <span>Logeate</span>
-            <Link to={"/carrito"}><span className='icon'> < HiOutlineShoppingCart /></span></Link>
+            <span> <CartWidget /></span>
         </div>
     )
 }
