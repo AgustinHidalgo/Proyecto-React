@@ -10,10 +10,9 @@ const Producto = ({id, img, titulo, precio, descript, cantidad, estado}) =>{
                 <p>{descript}</p>
                 <h4 className="precio-card"> $ {precio}</h4>
                 <div className="conteiner-compra">
-                    <button className="boton-card">Comprar</button>
-                    <Link to={`/producto/${id}`}><button className="boton-card">Ver Mas</button></Link>
-                    <span>{cantidad}</span>
-                    <span>{estado}</span>
+                    <Link to={`/producto/${id}`}><button className="boton-card">Comprar</button></Link>
+                    <span className="bold">{cantidad}</span>
+                    <span className="bold">{estado}</span>
                 </div>
             
             

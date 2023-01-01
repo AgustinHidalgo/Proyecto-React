@@ -54,6 +54,12 @@ body{
 }
 .cuerpoDetalle{
   margin: 0 25px;
+  
+}
+.stockCard{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .fotoDetalle{
   margin-left: 30px;
@@ -61,7 +67,9 @@ body{
 .boton-card{
   margin: 10px;
   padding: 8px;
-  border-radius: 15px;
+  font-weight: bold ;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 .titulo-card{
   margin: 0 12px;
@@ -79,6 +87,23 @@ a{
 .itemCountDiv{
   margin: 0 60px;
   display: flex;
+  gap: 10px;
+}
+.addButton{
+  color: #ffa107;
+  background-color: rgb(17, 14, 14);
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid;
+  border-color: #ffa107;
+  
+
+}
+.itemCountDiv p {
+  color: #ffa107;
+  font-size: 18px;
+  font-weight: bold;
 }
 p {
   color: white
@@ -86,11 +111,85 @@ p {
 li{
   color: white;
 }
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.bold{
+  font-weight: bold;
+}
+.cantCart{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.navStyle{
+  font-size: medium;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.itemCountButton{
+  font-size: 25px;
+  color: #ffa107;
+  background-color: rgb(17, 14, 14);
+  border: none;
+}
+.divCart{
+  display: flex;
+  flex-direction: column;
+}
+.h2Cart{
+  text-align: center;
+  color: #ffa107;
+}
+.divProdCart{
+  display: flex;
+  color: #ffa107;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.divProdCart p{
+  color: #ffa107;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: bold;
+
+}
+.divCart p{
+  color: #ffa107;
+  text-align: end;
+  margin-right: 14px;
+  font-size: 19px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.deleteButton{
+  margin-left: 600px;
+  margin-right: 100px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffa107;
+  border: 1px solid;
+  border-color: #ffa107;
+  background-color: rgb(17, 14, 14);
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.iconDoneCart{
+  font-size: x-large;
+}
+.divButton{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 15px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 35px;
+}
+.catButton{
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffa107;
+  border: 1px solid;
+  border-color: #ffa107;
+  background-color: rgb(17, 14, 14);
+  font-family: Arial, Helvetica, sans-serif;
+}

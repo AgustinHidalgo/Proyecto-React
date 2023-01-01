@@ -13,10 +13,15 @@ const ProductoDetalle = ({item }) => {
     
     
     const onAdd = (cant) =>{
+        if(cant > 0){
         alert("Se agregaron correctamente " + cant + " al carrito")
         setItemCount(cant)
         addToCart(item,cant)
-        console.log(item)
+        }
+        else{
+            
+        }
+        
     }
     
     return(
@@ -28,19 +33,21 @@ const ProductoDetalle = ({item }) => {
                 <div className="cuerpoDetalle">
                     <h2 className="titulo-card-detalle">{titulo}</h2>
                     <p>{descript}</p>
-                    <h4 className="precio-card">{precio}</h4>
-                    <span>{cantidad}</span>
-                    <span>{estado}</span>
+                    <div className="stockCard">
+                        <h4 className="precio-card"> ${precio}</h4>
+                        <span>{cantidad} En stock</span>
+                        
+                    </div>
                     <br></br>
-                    <button className="boton-card-detalle">Comprar</button>
+                    {
+                        itemCount === 0
+                        ?<ItemCount stock={item.cantidad} initial={itemCount} onAdd={onAdd}/>
+                        :<Link to={"/carrito"}><button className="addButton">Ir al carrito</button></Link>
+                    }
                 </div>
                 
             </div>
-            {
-                itemCount === 0
-                ?<ItemCount stock={item.cantidad} initial={itemCount} onAdd={onAdd}/>
-                :<Link to={"/carrito"}><button>Ir al carrito</button></Link>
-            }
+            
         </>
     )
             }
